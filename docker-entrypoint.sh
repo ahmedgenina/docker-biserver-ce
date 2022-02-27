@@ -54,10 +54,11 @@ fix_permission() {
 }
 
 update_db() {
-	: ${DATABASE_DIALECT:="org.hibernate.dialect.MySQL5InnoDBDialect"}
-	: ${DATABASE_DRIVER:="com.mysql.jdbc.Driver"}
-	: ${DATABASE_HOST:="localhost"}
-	: ${DATABASE_PORT:="3306"}
+
+	: ${DATABASE_DIALECT:="org.hibernate.dialect.PostgreSQLDialect"}
+	: ${DATABASE_DRIVER:="org.postgresql.Driver"}
+	: ${DATABASE_HOST:="db2"}
+	: ${DATABASE_PORT:="5432"}
 	: ${DATABASE_USER:="$BISERVER_USER"}
 	: ${DATABASE_PASSWD:="$BISERVER_USER"}
 	: ${DATABASE_HIBERNATE:="pbi_hibernate"}
@@ -67,7 +68,7 @@ update_db() {
 	: ${DATABASE_REPOSITORY:="pbi_jackrabbit"}
 	: ${DATABASE_REPOSITORY_URL:="jdbc:mysql://$DATABASE_HOST:DATABASE_PORT/$DATABASE_REPOSITORY"}
 	: ${DATABASE_VALIDATION_QUERY:="SELECT 1"}
-	: ${DATABASE_TYPE:="mysql"}
+	: ${DATABASE_TYPE:="postgresql"}
 	
 	/bin/cp -f $BISERVER_HOME/pentaho-solutions/system/jackrabbit/repository.xml.template $BISERVER_HOME/pentaho-solutions/system/jackrabbit/repository.xml \
 		&& sed -i -e 's|\(jdbc.driver=\).*|\1'"$DATABASE_DRIVER"'|' pentaho-solutions/system/applicationContext-spring-security-hibernate.properties \

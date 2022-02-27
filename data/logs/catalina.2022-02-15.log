@@ -1,0 +1,189 @@
+15-Feb-2022 10:39:30.696 WARNING [main] org.apache.catalina.core.AprLifecycleListener.init The APR based Apache Tomcat Native library failed to load. The error reported was [/biserver-ce/tomcat/lib/libtcnative-1.so.0.2.8: libapr-1.so.0: cannot open shared object file: No such file or directory]
+ java.lang.UnsatisfiedLinkError: /biserver-ce/tomcat/lib/libtcnative-1.so.0.2.8: libapr-1.so.0: cannot open shared object file: No such file or directory
+	at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+	at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1941)
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1857)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:870)
+	at java.lang.System.loadLibrary(System.java:1122)
+	at org.apache.tomcat.jni.Library.<init>(Library.java:42)
+	at org.apache.tomcat.jni.Library.initialize(Library.java:178)
+	at org.apache.catalina.core.AprLifecycleListener.init(AprLifecycleListener.java:197)
+	at org.apache.catalina.core.AprLifecycleListener.isAprAvailable(AprLifecycleListener.java:106)
+	at org.apache.catalina.connector.Connector.setProtocol(Connector.java:564)
+	at org.apache.catalina.connector.Connector.<init>(Connector.java:66)
+	at org.apache.catalina.startup.ConnectorCreateRule.begin(ConnectorCreateRule.java:62)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1193)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:182)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1339)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1466)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:552)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:603)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+
+15-Feb-2022 10:39:30.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.37
+15-Feb-2022 10:39:30.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 1 2016 10:01:52 UTC
+15-Feb-2022 10:39:30.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.37.0
+15-Feb-2022 10:39:30.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+15-Feb-2022 10:39:30.933 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.4.0-99-generic
+15-Feb-2022 10:39:30.933 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+15-Feb-2022 10:39:30.933 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-oracle/jre
+15-Feb-2022 10:39:30.933 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_131-b11
+15-Feb-2022 10:39:30.933 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+15-Feb-2022 10:39:30.933 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /biserver-ce/tomcat
+15-Feb-2022 10:39:30.934 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /biserver-ce/tomcat
+15-Feb-2022 10:39:30.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/biserver-ce/tomcat/conf/logging.properties
+15-Feb-2022 10:39:30.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+15-Feb-2022 10:39:30.936 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+15-Feb-2022 10:39:30.936 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -DKETTLE_HOME=/biserver-ce/pentaho-solutions/system/kettle
+15-Feb-2022 10:39:30.937 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.security.egd=file:/dev/./urandom
+15-Feb-2022 10:39:30.937 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xms4096m
+15-Feb-2022 10:39:30.937 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx4096m
+15-Feb-2022 10:39:30.937 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:+UseG1GC
+15-Feb-2022 10:39:30.937 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:+UseStringDeduplication
+15-Feb-2022 10:39:30.938 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:+PreserveFramePointer
+15-Feb-2022 10:39:30.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.awt.headless=true
+15-Feb-2022 10:39:30.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dpentaho.karaf.root.copy.dest.folder=../../tmp/osgi/karaf
+15-Feb-2022 10:39:30.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dpentaho.karaf.root.transient=false
+15-Feb-2022 10:39:30.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:ErrorFile=../logs/jvm_error.log
+15-Feb-2022 10:39:30.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -verbose:gc
+15-Feb-2022 10:39:30.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xloggc:../logs/gc.log
+15-Feb-2022 10:39:30.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:+PrintGCDetails
+15-Feb-2022 10:39:30.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:+PrintGCDateStamps
+15-Feb-2022 10:39:30.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:+PrintHeapAtGC
+15-Feb-2022 10:39:30.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:+PrintStringDeduplicationStatistics
+15-Feb-2022 10:39:30.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:+UseGCLogFileRotation
+15-Feb-2022 10:39:30.946 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:NumberOfGCLogFiles=2
+15-Feb-2022 10:39:30.947 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:GCLogFileSize=64M
+15-Feb-2022 10:39:30.947 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:OnOutOfMemoryError=/usr/bin/oom_killer
+15-Feb-2022 10:39:30.947 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.rmi.dgc.client.gcInterval=3600000
+15-Feb-2022 10:39:30.947 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.rmi.dgc.server.gcInterval=3600000
+15-Feb-2022 10:39:30.947 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=utf8
+15-Feb-2022 10:39:30.948 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -DDI_HOME=/biserver-ce/pentaho-solutions/system/kettle
+15-Feb-2022 10:39:30.948 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/biserver-ce/tomcat/endorsed
+15-Feb-2022 10:39:30.948 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/biserver-ce/tomcat
+15-Feb-2022 10:39:30.948 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/biserver-ce/tomcat
+15-Feb-2022 10:39:30.948 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/biserver-ce/tomcat/temp
+15-Feb-2022 10:39:31.361 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+15-Feb-2022 10:39:31.418 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+15-Feb-2022 10:39:31.422 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+15-Feb-2022 10:39:31.428 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+15-Feb-2022 10:39:31.439 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1530 ms
+15-Feb-2022 10:39:31.480 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+15-Feb-2022 10:39:31.480 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.37
+15-Feb-2022 10:39:31.534 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /biserver-ce/tomcat/webapps/sw-style
+15-Feb-2022 10:39:34.254 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+15-Feb-2022 10:39:34.382 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /biserver-ce/tomcat/webapps/sw-style has finished in 2,842 ms
+15-Feb-2022 10:39:34.383 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /biserver-ce/tomcat/webapps/pentaho-style
+15-Feb-2022 10:39:35.458 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+15-Feb-2022 10:39:35.473 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /biserver-ce/tomcat/webapps/pentaho-style has finished in 1,090 ms
+15-Feb-2022 10:39:35.474 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /biserver-ce/tomcat/webapps/ROOT
+15-Feb-2022 10:39:36.672 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+15-Feb-2022 10:39:36.683 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /biserver-ce/tomcat/webapps/ROOT has finished in 1,209 ms
+15-Feb-2022 10:39:36.684 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /biserver-ce/tomcat/webapps/pentaho
+15-Feb-2022 10:39:36.691 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'docbase' to 'webapps/pentaho/' did not find a matching property.
+15-Feb-2022 10:40:10.330 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+15-Feb-2022 10:40:11.740 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent open start - state modified
+15-Feb-2022 10:40:11.807 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent checkpointClose start
+15-Feb-2022 10:40:11.808 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent checkpointClose synched
+15-Feb-2022 10:40:11.821 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent checkpointClose script done
+15-Feb-2022 10:40:11.831 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent checkpointClose end
+15-Feb-2022 10:40:11.870 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent open start - state modified
+15-Feb-2022 10:40:11.907 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent checkpointClose start
+15-Feb-2022 10:40:11.908 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent checkpointClose synched
+15-Feb-2022 10:40:11.917 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent checkpointClose script done
+15-Feb-2022 10:40:11.927 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent checkpointClose end
+15-Feb-2022 10:40:11.969 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent open start - state modified
+15-Feb-2022 10:40:12.005 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent dataFileCache open start
+15-Feb-2022 10:40:12.015 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent dataFileCache open end
+15-Feb-2022 10:40:12.418 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent checkpointClose start
+15-Feb-2022 10:40:12.418 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent checkpointClose synched
+15-Feb-2022 10:40:12.609 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent checkpointClose script done
+15-Feb-2022 10:40:12.609 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent dataFileCache commit start
+15-Feb-2022 10:40:12.612 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent dataFileCache commit end
+15-Feb-2022 10:40:12.634 INFO [HSQLDB Server @6d73f9ca] org.hsqldb.persist.Logger.logInfoEvent checkpointClose end
+15-Feb-2022 10:40:24.547 INFO [Thread-8] org.apache.karaf.main.Main$KarafLockCallback.lockAquired Lock acquired. Setting startlevel to 100
+15-Feb-2022 10:40:37.228 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://cxf.apache.org/blueprint/core
+15-Feb-2022 10:40:37.250 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://cxf.apache.org/configuration/beans
+15-Feb-2022 10:40:37.262 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://cxf.apache.org/configuration/parameterized-types
+15-Feb-2022 10:40:37.310 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://cxf.apache.org/configuration/security
+15-Feb-2022 10:40:37.313 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://schemas.xmlsoap.org/wsdl/
+15-Feb-2022 10:40:37.321 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://www.w3.org/2005/08/addressing
+15-Feb-2022 10:40:37.323 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://schemas.xmlsoap.org/ws/2004/08/addressing
+15-Feb-2022 10:40:37.364 INFO [FelixStartLevel] org.apache.cxf.bus.osgi.CXFExtensionBundleListener.addExtensions Adding the extensions from bundle org.apache.cxf.cxf-rt-management (76) [org.apache.cxf.management.InstrumentationManager]
+15-Feb-2022 10:40:38.214 INFO [FelixStartLevel] org.apache.cxf.bus.osgi.CXFExtensionBundleListener.addExtensions Adding the extensions from bundle org.apache.cxf.cxf-rt-wsdl (79) [org.apache.cxf.wsdl.WSDLManager]
+15-Feb-2022 10:40:38.235 INFO [FelixStartLevel] org.apache.cxf.bus.osgi.CXFExtensionBundleListener.addExtensions Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-xml (81) [org.apache.cxf.binding.xml.XMLBindingFactory, org.apache.cxf.binding.xml.wsdl11.XMLWSDLExtensionLoader]
+15-Feb-2022 10:40:38.241 INFO [FelixStartLevel] org.apache.cxf.bus.osgi.CXFExtensionBundleListener.addExtensions Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-soap (82) [org.apache.cxf.binding.soap.SoapBindingFactory, org.apache.cxf.binding.soap.SoapTransportFactory]
+15-Feb-2022 10:40:38.246 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://cxf.apache.org/blueprint/bindings/soap
+15-Feb-2022 10:40:38.305 INFO [FelixStartLevel] org.apache.cxf.bus.osgi.CXFExtensionBundleListener.addExtensions Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-policy (103) [org.apache.cxf.ws.policy.PolicyEngine, org.apache.cxf.policy.PolicyDataEngine, org.apache.cxf.ws.policy.AssertionBuilderRegistry, org.apache.cxf.ws.policy.PolicyInterceptorProviderRegistry, org.apache.cxf.ws.policy.PolicyBuilder, org.apache.cxf.ws.policy.PolicyAnnotationListener, org.apache.cxf.ws.policy.attachment.ServiceModelPolicyProvider, org.apache.cxf.ws.policy.attachment.external.DomainExpressionBuilderRegistry, org.apache.cxf.ws.policy.attachment.external.EndpointReferenceDomainExpressionBuilder, org.apache.cxf.ws.policy.attachment.external.URIDomainExpressionBuilder, org.apache.cxf.ws.policy.attachment.wsdl11.Wsdl11AttachmentPolicyProvider, org.apache.cxf.ws.policy.mtom.MTOMAssertionBuilder, org.apache.cxf.ws.policy.mtom.MTOMPolicyInterceptorProvider]
+15-Feb-2022 10:40:38.311 INFO [FelixStartLevel] org.apache.cxf.bus.osgi.CXFExtensionBundleListener.addExtensions Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-http (86) [org.apache.cxf.transport.http.HTTPTransportFactory, org.apache.cxf.transport.http.HTTPWSDLExtensionLoader, org.apache.cxf.transport.http.policy.HTTPClientAssertionBuilder, org.apache.cxf.transport.http.policy.HTTPServerAssertionBuilder, org.apache.cxf.transport.http.policy.NoOpPolicyInterceptorProvider]
+15-Feb-2022 10:40:38.385 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://cxf.apache.org/transports/http/configuration
+15-Feb-2022 10:40:38.402 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://cxf.apache.org/blueprint/simple
+15-Feb-2022 10:40:38.464 INFO [FelixStartLevel] org.apache.cxf.bus.osgi.CXFExtensionBundleListener.addExtensions Adding the extensions from bundle org.apache.cxf.cxf-rt-frontend-jaxws (88) [org.apache.cxf.jaxws.context.WebServiceContextResourceResolver]
+15-Feb-2022 10:40:38.468 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://cxf.apache.org/blueprint/jaxws
+15-Feb-2022 10:40:38.521 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://cxf.apache.org/blueprint/jaxrs
+15-Feb-2022 10:40:38.543 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://cxf.apache.org/blueprint/jaxrs-client
+15-Feb-2022 10:40:38.580 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://cxf.apache.org/binding/coloc
+15-Feb-2022 10:40:38.591 INFO [FelixStartLevel] org.apache.cxf.bus.osgi.CXFExtensionBundleListener.addExtensions Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-local (99) [org.apache.cxf.transport.local.LocalTransportFactory]
+15-Feb-2022 10:40:38.606 INFO [FelixStartLevel] org.apache.cxf.bus.osgi.CXFExtensionBundleListener.addExtensions Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-object (100) [org.apache.cxf.binding.object.ObjectBindingFactory]
+15-Feb-2022 10:40:38.609 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://cxf.apache.org/blueprint/binding/object
+15-Feb-2022 10:40:38.626 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://cxf.apache.org/policy
+15-Feb-2022 10:40:38.628 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://www.w3.org/ns/ws-policy
+15-Feb-2022 10:40:38.636 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://www.w3.org/2006/07/ws-policy
+15-Feb-2022 10:40:38.637 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://schemas.xmlsoap.org/ws/2004/09/policy
+15-Feb-2022 10:40:38.638 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd
+15-Feb-2022 10:40:38.639 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd
+15-Feb-2022 10:40:38.640 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://www.w3.org/2000/09/xmldsig#
+15-Feb-2022 10:40:38.650 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702
+15-Feb-2022 10:40:38.659 INFO [FelixStartLevel] org.apache.cxf.bus.osgi.CXFExtensionBundleListener.addExtensions Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-addr (120) [org.apache.cxf.ws.addressing.policy.AddressingAssertionBuilder, org.apache.cxf.ws.addressing.policy.UsingAddressingAssertionBuilder, org.apache.cxf.ws.addressing.policy.AddressingPolicyInterceptorProvider, org.apache.cxf.ws.addressing.impl.AddressingWSDLExtensionLoader, org.apache.cxf.ws.addressing.WSAddressingFeature$WSAddressingFeatureApplier, org.apache.cxf.ws.addressing.MAPAggregator$MAPAggregatorLoader]
+15-Feb-2022 10:40:38.662 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://cxf.apache.org/ws/addressing
+15-Feb-2022 10:40:38.717 INFO [FelixStartLevel] org.apache.cxf.bus.osgi.CXFExtensionBundleListener.addExtensions Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-security (122) [org.apache.cxf.ws.security.policy.WSSecurityPolicyLoader, org.apache.cxf.ws.security.cache.CacheCleanupListener]
+15-Feb-2022 10:40:38.741 INFO [FelixStartLevel] org.apache.cxf.bus.osgi.CXFExtensionBundleListener.addExtensions Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-rm (124) [org.apache.cxf.ws.rm.RMManager, org.apache.cxf.ws.rm.policy.RMPolicyInterceptorProvider, org.apache.cxf.ws.rm.policy.RM10AssertionBuilder, org.apache.cxf.ws.rm.policy.RM12AssertionBuilder, org.apache.cxf.ws.rm.policy.WSRMP12PolicyLoader, org.apache.cxf.ws.rm.policy.MC11PolicyLoader, org.apache.cxf.ws.rm.policy.RSPPolicyLoader]
+15-Feb-2022 10:40:38.749 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://cxf.apache.org/ws/rm/manager
+15-Feb-2022 10:40:38.749 INFO [FelixStartLevel] org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer.register Registered blueprint namespace handler for http://schemas.xmlsoap.org/ws/2005/02/rm/policy
+15-Feb-2022 10:40:38.760 INFO [FelixStartLevel] org.apache.cxf.bus.osgi.CXFExtensionBundleListener.addExtensions Adding the extensions from bundle org.apache.cxf.cxf-rt-javascript (125) [org.apache.cxf.javascript.JavascriptServerListener]
+15-Feb-2022 10:40:39.517 INFO [FelixStartLevel] org.pentaho.caching.impl.PentahoCacheManagerFactory$RegistrationHandler$1.onSuccess New Caching Service registered
+15-Feb-2022 10:40:51.105 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.registerMBeanWithServer registering MBean org.apache.cxf:bus.id=marketplaceImplBus,type=Bus,instance.id=1728187388: org.apache.cxf.bus.ManagedBus@7e88712b
+15-Feb-2022 10:40:51.230 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.registerMBeanWithServer registering MBean org.apache.cxf:bus.id=marketplaceImplBus,type=Bus,instance.id=1728187388: javax.management.modelmbean.RequiredModelMBean@3e220a75
+15-Feb-2022 10:40:51.231 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.init registered org.apache.cxf:bus.id=marketplaceImplBus,type=Bus,instance.id=1728187388
+15-Feb-2022 10:40:51.235 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.registerMBeanWithServer registering MBean org.apache.cxf:bus.id=marketplaceImplBus,WorkQueueManager=Bus.WorkQueueManager,type=WorkQueueManager,instance.id=275226087: org.apache.cxf.bus.managers.WorkQueueManagerImplMBeanWrapper@12584547
+15-Feb-2022 10:40:51.244 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.registerMBeanWithServer registering MBean org.apache.cxf:bus.id=marketplaceImplBus,WorkQueueManager=Bus.WorkQueueManager,type=WorkQueueManager,instance.id=275226087: javax.management.modelmbean.RequiredModelMBean@1e64d50c
+15-Feb-2022 10:40:52.735 INFO [FelixStartLevel] org.apache.cxf.endpoint.ServerImpl.initDestination Setting the server's publish address to be /marketplace
+15-Feb-2022 10:40:52.737 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.registerMBeanWithServer registering MBean org.apache.cxf:bus.id=marketplaceImplBus,type=Bus.Service.Endpoint,service="{http://endpoints.marketplace.pentaho.org/}MarketplaceService",port="MarketplaceService",instance.id=660191157: org.apache.cxf.endpoint.ManagedEndpoint@151f42e2
+15-Feb-2022 10:40:52.740 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.registerMBeanWithServer registering MBean org.apache.cxf:bus.id=marketplaceImplBus,type=Bus.Service.Endpoint,service="{http://endpoints.marketplace.pentaho.org/}MarketplaceService",port="MarketplaceService",instance.id=660191157: javax.management.modelmbean.RequiredModelMBean@a665f38
+15-Feb-2022 10:40:53.227 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.registerMBeanWithServer registering MBean org.apache.cxf:bus.id=pentaho-metaverse-web-cxf22535163,type=Bus,instance.id=22535163: org.apache.cxf.bus.ManagedBus@5e3d34cc
+15-Feb-2022 10:40:53.231 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.registerMBeanWithServer registering MBean org.apache.cxf:bus.id=pentaho-metaverse-web-cxf22535163,type=Bus,instance.id=22535163: javax.management.modelmbean.RequiredModelMBean@52558f46
+15-Feb-2022 10:40:53.231 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.init registered org.apache.cxf:bus.id=pentaho-metaverse-web-cxf22535163,type=Bus,instance.id=22535163
+15-Feb-2022 10:40:53.232 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.registerMBeanWithServer registering MBean org.apache.cxf:bus.id=pentaho-metaverse-web-cxf22535163,WorkQueueManager=Bus.WorkQueueManager,type=WorkQueueManager,instance.id=1180578363: org.apache.cxf.bus.managers.WorkQueueManagerImplMBeanWrapper@79e9b108
+15-Feb-2022 10:40:53.232 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.registerMBeanWithServer registering MBean org.apache.cxf:bus.id=pentaho-metaverse-web-cxf22535163,WorkQueueManager=Bus.WorkQueueManager,type=WorkQueueManager,instance.id=1180578363: javax.management.modelmbean.RequiredModelMBean@4ec571ad
+15-Feb-2022 10:40:54.001 INFO [FelixStartLevel] org.apache.cxf.endpoint.ServerImpl.initDestination Setting the server's publish address to be /lineage
+15-Feb-2022 10:40:54.007 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.registerMBeanWithServer registering MBean org.apache.cxf:bus.id=pentaho-metaverse-web-cxf22535163,type=Bus.Service.Endpoint,service="{http://service.metaverse.pentaho.org/}MetaverseService",port="MetaverseService",instance.id=1905075242: org.apache.cxf.endpoint.ManagedEndpoint@327e3862
+15-Feb-2022 10:40:54.009 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.registerMBeanWithServer registering MBean org.apache.cxf:bus.id=pentaho-metaverse-web-cxf22535163,type=Bus.Service.Endpoint,service="{http://service.metaverse.pentaho.org/}MetaverseService",port="MetaverseService",instance.id=1905075242: javax.management.modelmbean.RequiredModelMBean@180a9def
+15-Feb-2022 10:40:54.129 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.registerMBeanWithServer registering MBean org.apache.cxf:bus.id=i18nWebServiceBus,type=Bus,instance.id=1139899466: org.apache.cxf.bus.ManagedBus@7f7c0a34
+15-Feb-2022 10:40:54.131 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.registerMBeanWithServer registering MBean org.apache.cxf:bus.id=i18nWebServiceBus,type=Bus,instance.id=1139899466: javax.management.modelmbean.RequiredModelMBean@16e36c1f
+15-Feb-2022 10:40:54.137 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.init registered org.apache.cxf:bus.id=i18nWebServiceBus,type=Bus,instance.id=1139899466
+15-Feb-2022 10:40:54.143 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.registerMBeanWithServer registering MBean org.apache.cxf:bus.id=i18nWebServiceBus,WorkQueueManager=Bus.WorkQueueManager,type=WorkQueueManager,instance.id=389622044: org.apache.cxf.bus.managers.WorkQueueManagerImplMBeanWrapper@5fe2049d
+15-Feb-2022 10:40:54.145 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.registerMBeanWithServer registering MBean org.apache.cxf:bus.id=i18nWebServiceBus,WorkQueueManager=Bus.WorkQueueManager,type=WorkQueueManager,instance.id=389622044: javax.management.modelmbean.RequiredModelMBean@40d088ff
+15-Feb-2022 10:40:54.169 INFO [FelixStartLevel] org.apache.cxf.endpoint.ServerImpl.initDestination Setting the server's publish address to be /i18n
+15-Feb-2022 10:40:54.172 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.registerMBeanWithServer registering MBean org.apache.cxf:bus.id=i18nWebServiceBus,type=Bus.Service.Endpoint,service="{http://webservice.i18n.osgi.pentaho.org/}LocalizationWebservice",port="LocalizationWebservice",instance.id=566636288: org.apache.cxf.endpoint.ManagedEndpoint@45d68efe
+15-Feb-2022 10:40:54.173 INFO [FelixStartLevel] org.apache.cxf.management.jmx.InstrumentationManagerImpl.registerMBeanWithServer registering MBean org.apache.cxf:bus.id=i18nWebServiceBus,type=Bus.Service.Endpoint,service="{http://webservice.i18n.osgi.pentaho.org/}LocalizationWebservice",port="LocalizationWebservice",instance.id=566636288: javax.management.modelmbean.RequiredModelMBean@73741c5
+15-Feb-2022 10:41:24.782 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /biserver-ce/tomcat/webapps/pentaho has finished in 108,098 ms
+15-Feb-2022 10:41:24.782 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /biserver-ce/tomcat/webapps/jamon
+15-Feb-2022 10:41:25.791 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+15-Feb-2022 10:41:25.863 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /biserver-ce/tomcat/webapps/jamon has finished in 1,081 ms
+15-Feb-2022 10:41:25.898 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+15-Feb-2022 10:41:25.917 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+15-Feb-2022 10:41:25.924 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 112308 ms
