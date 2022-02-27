@@ -11,12 +11,12 @@ set -e
 : ${PDI_MAX_LOG_TIMEOUT:="1440"}
 : ${PDI_MAX_OBJ_TIMEOUT:="240"}
 
-: ${SERVER_NAME:="bi-server"}
-: ${SERVER_HOST:="`hostname`"}
+: ${SERVER_NAME:="bi"}
+: ${SERVER_HOST:="`185.209.230.131`"}
 : ${SERVER_PORT:="443"}
 : ${SERVER_URL:="https://${SERVER_HOST}/pentaho/"}
-: ${LOCALE_LANGUAGE:="en"}
-: ${LOCALE_COUNTRY:="US"}
+: ${LOCALE_LANGUAGE:="pt"}
+: ${LOCALE_COUNTRY:="BR"}
 
 : ${HOST_USER_ID:=""}
 
@@ -57,7 +57,7 @@ update_db() {
 
 	: ${DATABASE_DIALECT:="org.hibernate.dialect.PostgreSQLDialect"}
 	: ${DATABASE_DRIVER:="org.postgresql.Driver"}
-	: ${DATABASE_HOST:="db2"}
+	: ${DATABASE_HOST:="185.209.230.131"}
 	: ${DATABASE_PORT:="5432"}
 	: ${DATABASE_USER:="$BISERVER_USER"}
 	: ${DATABASE_PASSWD:="$BISERVER_USER"}
